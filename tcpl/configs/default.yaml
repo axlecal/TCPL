@@ -1,0 +1,41 @@
+﻿data:
+  n_channels: 22
+  seq_len: 128
+  n_classes: 4
+  train_subjects: [0, 1, 2, 3, 4, 5]
+  val_subjects: [6]
+  test_subjects: [7]
+  trials_per_class_per_subject: 30
+
+episode:
+  n_way: 4
+  k_shot: 2
+  q_query: 4
+  meta_batch_size: 4
+
+model:
+  d_model: 64
+  n_prompts: 10
+  tcn_channels: [64, 64, 128, 128]
+  tcn_dilations: [1, 2, 4, 8]
+  tcn_kernel_size: 3
+  transformer_layers: 4
+  transformer_heads: 8
+  transformer_ffn_dim: 256
+  dropout: 0.1
+
+train:
+  epochs: 20
+  episodes_per_epoch: 50
+  val_episodes: 30
+  test_episodes: 50
+  lr: 0.001
+  weight_decay: 0.0001
+  prompt_l2: 0.0001
+  grad_clip: 1.0
+  device: "cuda"
+  num_workers: 0
+  seed: 42
+  seeds: [42, 43, 44]
+  early_stopping_patience: 10
+  save_dir: "./runs/default"
