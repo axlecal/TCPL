@@ -1,0 +1,5 @@
+﻿torch
+numpy
+PyYAML
+scikit-learn
+tqdm
