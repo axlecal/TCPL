@@ -5,7 +5,7 @@ This project provides a full PyTorch implementation of:
 **TCPL: Task-Conditioned Prompt Learning for Few-Shot Cross-Subject Motor Imagery EEG Decoding**
 
 It includes:
-- TCPL model (Support Encoder + Prompt Generator + TCN + Transformer + Classifier)
+- TCPL model 
 - Episode-based meta-training loop
 - Subject-wise dataset and episode sampler
 - Validation/test scripts
